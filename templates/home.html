@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1 class="mt-5">Python test program</h1>
+    <p class="lead">"Lists all the "ADxxxx" products"</p>
+
+    <table style="width:50%">
+        <tr>
+          <th>Brand Name</th>
+          <th>Part#</th> 
+        </tr>
+        {% for i in template_data %}
+        <tr>
+          <td>{{ i['brand-name'] }}</td>
+          <td>{{ i['part'] }}</td> 
+        </tr>
+        {% endfor %}
+    </table>
+
+
+{% endblock %}
